@@ -1,0 +1,35 @@
+apiVersion: v1
+entries:
+  kube-otel-stack:
+  - apiVersion: v2
+    appVersion: 0.61.0
+    created: "2022-10-21T21:30:26.621743624Z"
+    dependencies:
+    - condition: kubeStateMetrics.enabled
+      name: kube-state-metrics
+      repository: https://prometheus-community.github.io/helm-charts
+      version: 4.20.2
+    - condition: nodeExporter.enabled
+      name: prometheus-node-exporter
+      repository: https://prometheus-community.github.io/helm-charts
+      version: 4.3.0
+    description: A Helm chart for managing the otel-collector and default kubernetes
+      components
+    digest: 975c09f3dbc84ef2062f22b9f4ad14ec0ac1af2e5f3b33184e3be8ce74f8c705
+    name: kube-otel-stack
+    type: application
+    urls:
+    - https://github.com/smithclay/prometheus-k8s-opentelemetry-collector/releases/download/kube-otel-stack-0.1.1/kube-otel-stack-0.1.1.tgz
+    version: 0.1.1
+  otelcollector:
+  - apiVersion: v2
+    appVersion: 0.61.0
+    created: "2022-10-21T21:30:26.766724191Z"
+    description: A Helm chart for managing otel-collector
+    digest: 4802ef7b18369e3b04f0b288ca9cd444541a1a70af5fd9b7e1d6fd71d2670a36
+    name: otelcollector
+    type: application
+    urls:
+    - https://github.com/smithclay/prometheus-k8s-opentelemetry-collector/releases/download/otelcollector-0.1.1/otelcollector-0.1.1.tgz
+    version: 0.1.1
+generated: "2022-10-21T21:30:26.766728691Z"
